@@ -1,0 +1,563 @@
+/* main styles */
+
+.bodytxt{
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bigMarg{
+    padding: 5%;
+}
+
+.titleText{
+    font-family: "DM Serif Text", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+/* animation */
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.revealScroll{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1.5s all ease;
+}
+
+.revealScroll.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delaySlow{
+    transition-delay: 0.5s;
+}
+
+.fadeTarget, .fadeArtLeft, .fadeArtRight{
+    opacity: 0;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.fadeIn{
+    opacity: 1;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.fadeOut{
+    opacity: 0;
+    animation: fadeOut 1s ease-in forwards;
+}
+
+@keyframes fadeInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.fadeInRight{
+    animation: fadeInRight 3s both;
+}
+
+.fadeInLeft{
+    animation: fadeInLeft 2.5s both;
+}
+
+
+/* navbar */
+
+.navbar{
+    font-family: "Archivo", sans-serif;
+    font-style: normal;
+}
+
+
+/* home page */
+
+#home{
+    margin: 50px !important;
+    padding: 2rem;
+}
+
+.picture{
+    width: 400px;
+    text-align: center;
+}
+
+.homePic{
+    width: 360px;
+    height: 500px;
+}
+
+#hi{
+    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 20% !important;
+}
+
+#nameTitle{
+    margin-top: 10px;
+    font-size: 88px;
+}
+
+.bio{
+    /* set the background image */
+    background-image: url("assets/bgBio.jpg");
+        
+    /* prevent the background from scrolling with the page content */
+    background-attachment: fixed;
+        
+    /* Center the image */
+    background-position: center;
+        
+    /* the image covers the entire viewport without repeating */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    width: 100%;
+    padding: 8rem 0;
+}
+
+.bioText{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    font-size: 22px;
+    text-align: center;
+    background-color: #FCFCFC;
+}
+
+/* proj div */
+
+#projects{
+    text-align: center;
+    padding: 2rem auto;
+    margin-bottom: 10%;
+}
+
+.projHeading{
+    font-size: 52px;
+    margin-top: 5% !important;
+}
+
+.iconCol{
+    position: relative;
+    display: block;
+    padding-top: 3rem;
+    text-decoration: none;
+}
+
+.phoIcon{
+    width: 25rem;
+    height: 25rem;
+    opacity: 0.8;
+    transition: .3s ease;
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.iconCol a:hover .iconTitle {
+    color: #BA0000;
+}
+
+.phoIcon:hover{
+    opacity: 1;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.phoIcon:active{
+    transform: translateY(-2px);
+}
+
+
+.iconTitle{
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+/* contents */
+
+.contbg{
+    background-image: url("assets/bgContacts.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+
+    text-align: center;
+}
+
+.conText{
+    background-color: #FCFCFC;
+    opacity: 0.9;
+    border-radius: 10px;
+    max-width: 1000px !important;
+    margin: 5rem auto;
+    padding: 4rem 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.callbackTxt{
+    padding-top: 2%;
+    font-size: 52px;
+    margin-top: 10% !important;
+}
+
+.iconRow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contentIcon{
+    height: 3rem;
+    width: 3rem;
+    margin: 2rem;
+    margin-bottom: 7rem;
+    transition: .3s ease;
+}
+
+.contentIcon:hover{
+    transform: scale(1.15);
+}
+
+.mailIcon{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+/* -- PROJECTS FILE -- */
+
+#projectHome {
+    position: relative;
+    width: 100%;
+    padding: 4rem;
+    background-color: #121212;
+
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+    
+    overflow: hidden;
+}
+
+.projHomeBG {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10rem 0;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    filter: grayscale(100%) blur(2px) opacity(0.8);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+.projectTitle{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    text-align: center;
+    border: 0.5rem solid #FCFCFC;
+    padding: 3rem;
+    margin: 12rem 2rem;
+    max-width: 700px;
+}
+
+.projTitleText{
+    font-size: 80px;
+    color: #FCFCFC;
+}
+
+#projIntro{
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.projIntroTxt{
+    padding: 0 5rem;
+    font-size: 20px;
+}
+
+/* video part */
+
+.videoBackground {
+    position: relative;
+    width: 100%;
+    padding: 8rem 0 10rem;
+    overflow: hidden;
+}
+
+/* video background layer (that gets blurred) */
+.videoBackground::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("./assets/project-photos/videoBg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(2px);
+
+    z-index: 0;
+}
+
+/* content layer (that doesnt get blurred) */
+.videoBackground > * {
+    position: relative;
+    z-index: 1;
+}
+
+.vidTitle{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.vidTitleTxt{
+    font-size: 72px;
+    margin-top: 3%;
+    color: #121212;
+}
+
+.videoContents{
+    margin: 0 8% !important;
+    padding: 5% 0;
+    background-color: #FCFCFC;
+    border-radius: 6px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wtf{
+    display: flex !important;
+}
+
+.projTextBox {
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#carouselLink{
+    text-decoration: none;
+    color: #121212;
+}
+
+#carouselLink,
+#carouselText {
+  transition: opacity 0.3s ease;
+}
+
+
+.vidHeading{
+    font-size: 56px;
+    margin-bottom: 1.5rem;
+}
+
+.vidText{
+    font-size: 16px;
+}
+
+
+/* articles */
+
+.textCenter{
+    display: grid;
+    place-items: center; /* Shorthand for align-items: center and justify-items: center */
+}
+
+.artBox{
+    position: relative;
+    width: 100%;
+    padding: 3rem 5rem 10rem;
+    overflow: hidden;
+}
+
+/* article background layer (that gets blurred) */
+.artBox::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("./assets/project-photos/artBg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: opacity(0.3);
+
+    z-index: 0;
+}
+
+/* content layer (that doesnt get blurred) */
+.artBox > * {
+    position: relative;
+    z-index: 1;
+}
+
+.artTitle{
+    text-align: center;
+    border: 0.5rem solid black;
+    padding: 2rem 5rem;
+    max-width: 900px;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.artTitleTxt{
+    font-size: 62px;
+}
+
+/* article pdf */
+.artPDF{
+    width: 100%;
+    height: 500px;
+    border: none;
+    padding: 0 6%;
+}
+
+.artText{
+    padding: 0 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.articleHeading{
+    font-size: 42px;
+    font-weight: 300;
+}
+
+.artBigHeads{
+    font-size: 50px;
+}
+
+.articleSubHeading{
+    font-size: 36px;
+}
+
+.articleBodyText{
+    font-size: 18px;
+    padding-top: 2rem;
+}
+
+.articleSpace{
+    padding-bottom: 7%;
+}
+
+.article1{
+    padding-top: 3%;
+}
+
+
+/* audio storytelling part */
+#audstor{
+    position: relative;
+    width: 100%;
+    padding: 8rem 0 10rem;
+    overflow: hidden;
+}
+
+#audstor::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("./assets/project-photos/audstorBg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(100%) blur(2px);
+
+    z-index: 0;
+}
+
+#audstor > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.audioStory{
+    text-align: center;
+    padding: 2rem;
+    background-color: #FCFCFC;
+    border-radius: 6rem;
+    width: 50%;
+    
+    margin: auto;
+}
+
+.audstorTitle{
+    margin: 2rem auto;
+}
+
+.audstorTitleText{
+    font-size: 52px;
+}
+
+.asProjects{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-bottom: 3rem;
+}
