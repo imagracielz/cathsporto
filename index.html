@@ -7,8 +7,6 @@
 
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,40 +18,58 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Cath's</a>
+            
+            <!-- Button -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <!-- Links -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My Projects</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="pages/projects.html">My Projects</a></li>
-                  <li><a class="dropdown-item" href="pages/projects.html#video">Videos</a></li>
-                  <li><a class="dropdown-item" href="pages/projects.html#article">Article</a></li>
-                  <li><a class="dropdown-item" href="pages/projects.html#audstor">Audio Storytelling</a></li>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My Projects</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="pages/projects.html">My Projects</a></li>
+                        <li><a class="dropdown-item" href="pages/projects.html#video">Videos</a></li>
+                        <li><a class="dropdown-item" href="pages/projects.html#article">Article</a></li>
+                        <li><a class="dropdown-item" href="pages/projects.html#audstor">Audio Storytelling</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-          </ul>
+            </div>    
         </div>
       
     </nav>
 
     <!-- Home Page -->
-    <div class="row" id="home">
-        <div class="picture col">
-            <img src="assets/mypretty.jpeg" class="homePic">
-        </div>
-        <div class="titleText col reveal">
-            <h1 id="hi">Hi There,</h1>
-            <h1 id="nameTitle">I'm Catherine</h1>
-        </div>
+     <section id="home" class="container-fluid p-0">
+        <div class="row g-0 heroWrapper align-items-center">
+            <div class="picture col-12 col-md-6 position-relative">
+                <img src="assets/mypretty.jpeg" class="homePic">
+            </div>
+            <!-- for desktop -->
+            <div class="titleText col-md-6 d-none d-md-block reveal homeTitle">
+                <h1 id="hi">Hi There,</h1>
+                <h1 id="nameTitle">I'm Catherine</h1>
+            </div>
+            <!-- for mobile -->
+             <div class="titleText d-md-none heroTextMobile homeTitle">
+                <h1 id="hi" class="reveal">Hi There,</h1>
+                <h1 id="nameTitle" class="reveal">I'm Catherine</h1>
+            </div>
 
-    </div>
+        </div>
+     </section>
+    
 
     <!-- Biography -->
     <div class="bio container-fluid">
@@ -107,7 +123,8 @@
     </div>
 
     <script src="pages/projScript.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
