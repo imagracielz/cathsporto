@@ -580,9 +580,15 @@
 /* article pdf */
 .artPDF{
     width: 100%;
-    height: 500px;
+    height: 520px !important;
     border: none;
     padding: 0 6%;
+}
+
+.artPDF iframe,
+iframe.artPDF {
+    width: 100%;
+    height: 100%;
 }
 
 .artText{
@@ -644,7 +650,12 @@
     }
 
     .artPDF{
-        padding: 10% 0;
+        width: 100%;
+        height: auto;
+        min-height: 60vh; 
+        padding: 0;
+        margin: 10% auto;
+        display: block;
     }
 } 
 
@@ -716,4 +727,3 @@
         font-size: 16px;
     }
 } 
-
