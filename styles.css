@@ -18,7 +18,7 @@
 }
 
 /* mobile version */
-@media (max-width: 576px){
+@media (max-width: 720px){
     .bodytxt p{
         font-size: 20px !important;
     }
@@ -175,7 +175,7 @@
 }
 
 /* mobile version */
-@media (max-width: 576px){
+@media (max-width: 720px){
     #hi{
         font-size: 32px;
         margin: 0;
@@ -226,7 +226,7 @@
     background-color: #FCFCFC;
 }
 
-@media (max-width: 576px){
+@media (max-width: 720px){
     .bioText{
         font-size: 20px;
     }
@@ -321,11 +321,14 @@
 }
 
 /* mobile version */
-@media (max-width: 576px){
+@media (max-width: 720px){
     .callbackTxt{
-        font-size: 48px !important;
+        font-size: 42px !important;
     }
 
+    .contentIcon{
+        margin-bottom: 50% !important;
+    }
 }
 
 .iconRow{
@@ -398,6 +401,12 @@
     color: #FCFCFC;
 }
 
+@media (max-width: 720px){
+    .projTitleText{
+        font-size: 48px;
+    }
+} 
+
 #projIntro{
     margin: 3rem auto;
     padding: 2rem;
@@ -408,6 +417,13 @@
     padding: 0 5rem;
     font-size: 20px;
 }
+
+@media (max-width: 720px){
+    .projIntroTxt{
+        font-size: 16px;
+        padding: 0 2rem;
+    }
+} 
 
 /* video part */
 
@@ -488,19 +504,35 @@
     font-size: 16px;
 }
 
+@media (max-width: 720px){
+    .vidTitleTxt{
+        font-size: 48px;
+        padding-top: 10%;
+    }
+
+    .vidHeading{
+        font-size: 42px;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    .vidText{
+        font-size: 14px;
+    }
+} 
+
 
 /* articles */
 
 .textCenter{
     display: grid;
-    place-items: center; /* Shorthand for align-items: center and justify-items: center */
+    place-items: center; 
 }
 
 .artBox{
     position: relative;
     width: 100%;
     padding: 3rem 5rem 10rem;
-    overflow: hidden;
 }
 
 /* article background layer (that gets blurred) */
@@ -527,14 +559,23 @@
     text-align: center;
     border: 0.5rem solid black;
     padding: 2rem 5rem;
-    max-width: 900px;
-    width: 60%;
+    max-width: 90%;
     margin: 2rem auto;
 }
 
 .artTitleTxt{
     font-size: 62px;
 }
+
+@media (max-width: 720px){
+    .artBox {
+        padding: 2rem 1.5rem 4rem;
+    }
+
+    .artTitleTxt{
+        font-size: 48px;
+    }
+} 
 
 /* article pdf */
 .artPDF{
@@ -576,6 +617,36 @@
 .article1{
     padding-top: 3%;
 }
+
+@media (max-width: 720px){
+    .articleHeading{
+        font-size: 32px;
+    }
+
+    .artBigHeads{
+        font-size: 36px;
+    }
+
+    .articleSubHeading{
+        font-size: 30px;
+    }
+
+    .articleBodyText{
+        font-size: 16px;
+        padding-top: 1%;
+    }
+
+    .fadeArtLeft,
+    .fadeArtRight {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .artPDF{
+        padding: 10%;
+    }
+} 
 
 
 /* audio storytelling part */
@@ -630,3 +701,18 @@
     align-items: center;
     padding-bottom: 3rem;
 }
+
+@media (max-width: 720px){
+    .audioStory{
+        width: 85%;
+        padding: 5%;
+    }
+
+    .audstorTitleText{
+        font-size: 48px;
+    }
+
+    .asProj1Text{
+        font-size: 16px;
+    }
+} 
