@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,31 +16,42 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">Cath's</a>
 
+            <!-- Button -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <!-- Links -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="../index.html#home">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html#contact">Contact</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My Projects</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="projects.html">My Projects</a></li>
-                  <li><a class="dropdown-item" href="#video">Videos</a></li>
-                  <li><a class="dropdown-item" href="#article">Article</a></li>
-                  <li><a class="dropdown-item" href="#audstor">Audio Storytelling</a></li>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="../index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html#contact">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">My Projects</a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="projects.html">My Projects</a></li>
+                        <li><a class="dropdown-item" href="#video">Videos</a></li>
+                        <li><a class="dropdown-item" href="#article">Article</a></li>
+                        <li><a class="dropdown-item" href="#audstor">Audio Storytelling</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-          </ul>
+            </div> 
+            
         </div>
-      
     </nav>
+    
+    <!-- Home Page -->
     <div id="projectHome">
         <div class="projHomeBG"></div>
         <div class="projectTitle container">
@@ -61,7 +71,7 @@
         
         <div class="row videoContents">
             <!-- carousel -->
-            <div class="col">
+            <div class="col-12 col-md-6">
                 <div id="projCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner vidThumbnail">
 
@@ -131,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="col wtf">
+            <div class="col-12 col-md-6 wtf">
                 <div class="projTextBox">
                     <h3 id="carouselTitle" class="titleText vidHeading">
                         <a href="#" id="carouselLink">PFIK 2024</a>
@@ -151,7 +161,7 @@
         
         <div class="articles">
             <div class="row article1 articleSpace">
-                <div class="col-md-6 artText fadeArtLeft delaySlow">
+                <div class="col-md-6 artText fadeArtLeft delaySlow order-1 order-md-1">
                     <div class="artHead">
                         <h3 class="articleHeading titleText artBigHeads">Walking with Balloons, Holding on to Hope</h3>
                     </div>
@@ -160,7 +170,7 @@
                     </p>
                 </div>
 
-                <div class="col-md-6 artPhoto fadeArtRight delaySlow">
+                <div class="col-md-6 artPhoto fadeArtRight delaySlow order-2 order-md-2">
                     <iframe src="../assets/articles/walking-with-balloons-article.pdf" class="artPDF" title="Kontradiksi Budaya 'Banyak Anak Banyak Rezeki'">
                         <p class="bodytxt">Your browser does not support iframes. <a href="https://drive.google.com/file/d/11VTbHlAh0Zp-_BrlZTooMVxldKX0auKN/view?usp=sharing">Download the PDF</a> instead.</p>
                     </iframe>
@@ -168,13 +178,13 @@
             </div>
             
             <div class="row article2 articleSpace">
-                <div class="col-md-6 artPhoto fadeArtLeft">
+                <div class="col-md-6 artPhoto fadeArtLeft order-2 order-md-1">
                     <iframe src="../assets/articles/fast-fashion-article.pdf" class="artPDF" title="Membongkar Realitas Fast Fashion:">
                         <p class="bodytxt">Your browser does not support iframes. <a href="https://drive.google.com/file/d/1FCH1PghrCEV98sCBRcGnfvGZWWbxkLmQ/view?usp=sharing">Download the PDF</a> instead.</p>
                     </iframe>
                 </div>
 
-                <div class="col-md-6 artText fadeArtRight">
+                <div class="col-md-6 artText fadeArtRight order-1 order-md-2">
                     <div class="artHead">
                         <h3 class="articleHeading titleText">Membongkar Realitas <i>Fast Fashion:</i></h3>
                         <h4 class="articleSubHeading titleText">Tren, Limbah, Kesehatan, dan Lingkungan</h4>
@@ -184,14 +194,14 @@
             </div>
 
             <div class="row article3 articleSpace">
-                <div class="col-md-6 artText fadeArtLeft">
+                <div class="col-md-6 artText fadeArtLeft order-1 order-md-1">
                     <div class="artHead">
                         <h3 class="articleHeading titleText">Kontradiksi Budaya "Banyak Anak Banyak Rezeki" dengan tren "Childfree" di Indonesia</h3>
                     </div>
                     <p class="bodytxt articleBodyText">Explores the contrast between the long-standing Indonesian belief that "having many children brings more blessing". It highlights data from BPS showing the rise of women opting to be childfree and explains key factors such as personal preferences mental readiness, financial pressures, and the demands of today's economy. Overall, it reflects the tension between cultural expectations and modern realities in Indonesia. </p>
                 </div>
 
-                <div class="col-md-6 artPhoto fadeArtRight">
+                <div class="col-md-6 artPhoto fadeArtRight order-2 order-md-2">
                     <iframe src="../assets/articles/budaya-childfree-article.pdf" class="artPDF" title="Kontradiksi Budaya 'Banyak Anak Banyak Rezeki'">
                         <p class="bodytxt">Your browser does not support iframes. <a href="https://drive.google.com/file/d/13U-mP622p4UgybDMvBBv9PtnnZVpsPBp/view?usp=sharing">Download the PDF</a> instead.</p>
                     </iframe>
@@ -199,13 +209,13 @@
             </div>
 
             <div class="row article4 articleSpace">
-                <div class="col-md-6 artPhoto fadeArtLeft">
+                <div class="col-md-6 artPhoto fadeArtLeft order-2 order-md-1">
                     <iframe src="../assets/articles/di-balik-sabuk-hitam-article.pdf" class="artPDF" title="Di Balik Sabuk Hitam">
                         <p class="bodytxt">Your browser does not support iframes. <a href="https://drive.google.com/file/d/1Y6YdSxa3W-7rljZKc8OlIPJd95OFL5in/view?usp=sharing">Download the PDF</a> instead.</p>
                     </iframe>
                 </div>
 
-                <div class="col-md-6 artText fadeArtRight">
+                <div class="col-md-6 artText fadeArtRight order-1 order-md-2">
                     <div class="artHead">
                         <h3 class="articleHeading titleText artBigHeads">Di Balik Sabuk Hitam</h3>
                     </div>
@@ -226,7 +236,7 @@
                     <img class="card-img-top" src="../assets/project-photos/audstor1.jpg" alt="Card image">
                     <div class="card-body">
                         <h4 class="card-title titleText">Klik, Cek, Hirup: Kupas Tuntas Aplikasi Pendeteksi Kualitas Udara - TEKNISI #18 by UMN Audio Storytelling</h4>
-                        <p class="card-text bodytxt">Di hiruk pikuk perkotaan, setiap inci jalan aspal ditutupi roda kendaraan. Langit yang seharusnya biru, menjelma kelabu tertutupi polusi udara.Sesak napas dan infeksi saluran pernapasan kian menjamur di kehidupan setiap insan.Di tengah ancaman masalah repirasi akibat polusi, hadir inovasi teknologi baru. Aplikasi yang memiliki kemampuan mendeteksi kualitas udara di sekitar.Kenali bagaimana teknologi baru ini menjadi kompas pernapasan baru bagi manusia, sekaligus kompleksitas pengembangannya!</p>
+                        <p class="card-text bodytxt asProj1Text">Di hiruk pikuk perkotaan, setiap inci jalan aspal ditutupi roda kendaraan. Langit yang seharusnya biru, menjelma kelabu tertutupi polusi udara. Sesak napas dan infeksi saluran pernapasan kian menjamur di kehidupan setiap insan. Di tengah ancaman masalah repirasi akibat polusi, hadir inovasi teknologi baru. Aplikasi yang memiliki kemampuan mendeteksi kualitas udara di sekitar. Kenali bagaimana teknologi baru ini menjadi kompas pernapasan baru bagi manusia, sekaligus kompleksitas pengembangannya!</p>
                         <a href="https://www.google.com/url?q=https%3A%2F%2Fcreators.spotify.com%2Fpod%2Fprofile%2Fumn-audio-storytelling%2Fepisodes%2FKlik--Cek--Hirup--Kupas-Tuntas-Aplikasi-Pendeteksi-Kualitas-Udara---TEKNISI-18-e3059q8%2Fa-abr4a8v&sa=D&sntz=1&usg=AOvVaw08TBDsZZVVYovZ3e9Enb05" class="btn btn-primary bodytxt">Listen in Spotify</a>
                     </div>
                 </div>
@@ -236,5 +246,6 @@
     </div>
     
     <script src="projScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
