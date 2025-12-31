@@ -644,7 +644,7 @@
     }
 
     .artPDF{
-        padding: 10%;
+        padding: 10% 0;
     }
 } 
 
@@ -716,3 +716,4 @@
         font-size: 16px;
     }
 } 
+
