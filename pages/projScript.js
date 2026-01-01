@@ -169,21 +169,17 @@ function handleArtAnimations() {
   const elements = document.querySelectorAll('.artText, .artPhoto');
 
   for (let i = 0; i < elements.length; i++) {
-    const el = elements[i];
-
     if (isMobile) {
-      el.classList.remove('fadeArtLeft', 'fadeArtRight');
-      el.classList.add('revealScroll');
+      elements[i].classList.remove('fadeArtLeft', 'fadeArtRight', 'fadeOut');
+      elements[i].classList.add('revealScroll');
     } else {
-      el.classList.remove('revealScroll', 'active');
+      elements[i].classList.remove('revealScroll', 'active');
 
       //restore original direction if on desktop
-      if (el.classList.contains('artText')) {
-        el.classList.add('fadeArtLeft');
-        el.classList.remove('fadeArtRight');
+      if (elements[i].classList.contains('order-md-1')) {
+        elements[i].classList.add('fadeArtLeft');
       } else {
-        el.classList.add('fadeArtRight');
-        el.classList.remove('fadeArtLeft');
+        elements[i].classList.add('fadeArtRight');
       }
     }
   }
