@@ -639,7 +639,7 @@ iframe.artPDF {
 }
 
 .artBtn{
-    max-width: 35%;
+    max-width: 45%;
 }
 
 @media (max-width: 720px){
@@ -745,3 +745,4 @@ iframe.artPDF {
         font-size: 16px;
     }
 } 
+
