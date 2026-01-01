@@ -162,3 +162,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+//article animation on mobile
+function handleArtAnimations() {
+  const isMobile = window.innerWidth <= 720;
+  const elements = document.querySelectorAll('.artText, .artPhoto');
+
+  for (let i = 0; i < elements.length; i++) {
+    const el = elements[i];
+
+    if (isMobile) {
+      el.classList.remove('fadeArtLeft', 'fadeArtRight');
+      el.classList.add('revealScroll');
+    } else {
+      el.classList.remove('revealScroll', 'active');
+
+      //restore original direction if on desktop
+      if (el.classList.contains('artText')) {
+        el.classList.add('fadeArtLeft');
+        el.classList.remove('fadeArtRight');
+      } else {
+        el.classList.add('fadeArtRight');
+        el.classList.remove('fadeArtLeft');
+      }
+    }
+  }
+
+  revealScroll();
+}
+
+window.addEventListener('scroll', revealScroll);
+window.addEventListener('load', handleArtAnimations);
+window.addEventListener('resize', handleArtAnimations);
