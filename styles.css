@@ -558,9 +558,9 @@
 .artTitle{
     text-align: center;
     border: 0.5rem solid black;
-    padding: 2rem 5rem;
+    padding: 5% 15%;
     max-width: 90%;
-    margin: 2rem auto;
+    margin: 7% auto;
 }
 
 .artTitleTxt{
@@ -652,7 +652,7 @@ iframe.artPDF {
     .artPDF{
         width: 100%;
         height: auto;
-        min-height: 60vh; 
+        min-height: 80vh; 
         padding: 0;
         margin: 10% auto;
         display: block;
