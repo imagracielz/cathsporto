@@ -320,17 +320,6 @@
     margin-top: 5% !important;
 }
 
-/* mobile version */
-@media (max-width: 720px){
-    .callbackTxt{
-        font-size: 42px !important;
-    }
-
-    .contentIcon{
-        margin-bottom: 50% !important;
-    }
-}
-
 .iconRow{
     display: flex;
     justify-content: center;
@@ -353,6 +342,21 @@
 .mailIcon{
     height: 3.5rem;
     width: 3.5rem;
+}
+
+/* mobile version */
+@media (max-width: 720px){
+    .callbackTxt{
+        font-size: 42px !important;
+    }
+
+    .iconRow{
+        gap: 0;
+    }
+
+    .contentIcon{
+        margin-bottom: 40% !important;
+    }
 }
 
 /* -- PROJECTS FILE -- */
